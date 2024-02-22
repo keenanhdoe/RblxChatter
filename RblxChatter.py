@@ -1,5 +1,6 @@
 version = open('verid', 'r')
 ver = version.readline()
+ver = ver.strip()
 verlist = ver.split('.')
 version.close()
 print('-' * 5, f'RblxChatter v{ver}', '-' * 5)
@@ -50,7 +51,7 @@ try:
     print('[input]: Please select your min second(default 9)')
     min = int(input('>>> '))
     print('[input]: Please select your max second(default 15)')
-    min = int(input('>>> '))
+    max = int(input('>>> '))
     print('[info]: Waiting for 5 seconds')
     time.sleep(5)
     while True:
