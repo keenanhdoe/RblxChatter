@@ -33,6 +33,7 @@ else :
 
 
 try:
+    
     import random
     print('\033[33m'+'[debug]: Imported random'+'\033[0m')
     import pyautogui
@@ -46,7 +47,10 @@ try:
     text = tpl.read()
     message = text.split("\n")
     tpl.close()
-
+    print('[input]: Please select your min second(default 9)')
+    min = int(input('>>> '))
+    print('[input]: Please select your max second(default 15)')
+    min = int(input('>>> '))
     print('[info]: Waiting for 5 seconds')
     time.sleep(5)
     while True:
@@ -61,7 +65,7 @@ try:
         send_keys('{ENTER}')
         send_keys('{ENTER}')
         print('[info]: Typed chat')
-        wait = random.randint(8, 15)
+        wait = random.randint(min, max)
         print(f'[info]: Waiting for {wait} seconds...')
         time.sleep(wait)
 except KeyboardInterrupt as KeyMsg:
